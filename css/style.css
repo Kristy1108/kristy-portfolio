@@ -1,0 +1,492 @@
+/* appling google font over the website  */
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    overflow-x: hidden; 
+    width: 100%;
+    max-width: 100%;
+}
+/* styling menu icon */
+.nav-menu{
+    border: none;
+    background-color: #fff;
+    font-size: 1.5rem;
+    color: #fca61f;
+}
+/* styling navbar links  */
+.navbar-nav a{
+    color: black;
+    position: relative;
+}
+.navbar-nav a:hover{
+    color: #fca61f;
+}
+.navbar-nav a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    top: 35px;
+    position: absolute;
+    background: #fca61f;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+.navbar-nav a:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+  /* styling contact btn  */
+.c-btn{
+    border: none;
+    background: #fca61f;
+    color: #fff;
+    font-size: 1.2rem;
+}
+/* styling home section starts */
+.home{
+    background: linear-gradient(33deg, rgba(242,242,255,1) 0%, rgba(235,249,255,1) 100%);
+    padding: 30px 0px 10px 0px;
+}
+.home h2{
+    font-size: 3rem;
+    line-height: 4rem;
+}
+.c-orange{
+    color: #6f34fe;
+    font-weight: 700;
+    font-size: 4rem;
+}
+.home p{
+    width: fit-content;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+.h-btn:hover{
+    background: #6f34fe;
+    color: #fff;
+    transform: translateY(-20px);
+    transition-duration: 1s;
+}
+.link{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #fca61f;
+    position: relative;
+}
+.link::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    top: 20px;
+    background-color: #6f34fe;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.link:hover{
+    color: #6f34fe;
+}
+.link:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+/* adding animation to home section image  */
+.home img{
+    animation: floatimg 4s ease-in-out infinite;
+}
+
+@keyframes floatimg {
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(-24px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+/* expertise section starts */
+.heading small{
+    color: #6f34fe;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.heading h3{
+    margin-top: 0.5rem;
+    color: #3f396d;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.expertise h4{
+    color: #3f396d;
+    font-weight: 700;
+}
+.expertise a{
+    text-decoration: none;
+    color: #fca61f;
+}
+.expertise a:hover{
+    color: #6f34fe;
+}
+.expertise .Working-card{
+    text-align: center;
+    padding: 15px 15px;
+    border-radius: 0.7rem;
+}
+
+/* skill section starts */
+.skill{
+    background-color: rgb(234, 234, 249);
+}
+.progress-card{
+    padding: 12% 10% 10% 15%;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 10%;
+}
+.progress-card:hover{
+    transform: scale(1.1,1.1);
+    transition-duration: 0.6s;
+}
+.circular-progress{
+    position: relative;
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    background: conic-gradient(#7d2ae8 3.6deg, #ededed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circular-progress::before{
+    content: "";
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.progress-value{
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.html-progress{
+    color: #fca61f;
+}
+.javascript-progress{
+    color: #6f34fe;
+}
+.Java-progress{
+    color: #20c997;
+}
+.C-progress{
+    color: #3f396d;
+}
+.text{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.heading p{
+    font-size: 1.3rem;
+}
+
+/* portfolio section starts */
+#myBtnContainer{
+    margin-bottom: 45px;
+}
+#myBtnContainer button{
+  border: none;
+  color: black;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;   
+  display: inline-block;
+  margin: 0 25px;
+}
+#myBtnContainer button:hover{
+    color: #fca61f;
+}
+
+#myBtnContainer button:focus{
+    outline: none;
+}
+.post .content h4{
+    font-size: 1rem;
+    font-weight: 700;
+}
+.post .card{
+    border: none;
+}
+
+/* contact section starts */
+.contact{
+    background-color: #f3f3f3;
+}
+.contact-details i{
+    font-size: 1.5rem;
+    color: #fca61f;
+}
+.contact-details p{
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
+.contact-form .form-control:focus{
+    box-shadow: none;
+    border: 1px solid #fca61f;
+}
+.contact-form .form-control{
+    padding: 10px 10px;
+    width: 80%;
+}
+
+/* footer section starts */
+footer{
+    background-color: #211e39;
+}
+
+footer .link-group a{
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #6c757d;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+footer .link-group a:hover{
+    color: #fca61f;
+}
+.social-links button{
+    border: none;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    background-color: #fff;
+    padding: 14px 15px 10px 15px;
+}
+.social-links .instagram{
+    color: #f33a7e;
+}
+.social-links button:hover{
+    color: #fff;
+    transform: translateY(-20px);
+    transition-duration: 1s;
+}
+.social-links .instagram:hover{
+    background-color: #f33a7e;
+}
+.social-links .whatsapp{
+    color: #25D366;
+}
+.social-links .whatsapp:hover{
+    background-color: #25D366;
+}
+.social-links .facebook{
+    color: #255afc;
+}
+.social-links .facebook:hover{
+    background-color: #255afc;
+}
+
+/* styling back to top button */
+#btn-back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: none;
+    font-size: 1.4rem;
+    background-color: #fca61f;
+    color: #fff;
+    animation: pulse 3s infinite;
+}
+
+.flip-horizontal {
+  transform: scaleX(-1);
+}
+
+/* Tech Icons Styling */
+.tech-icons {
+  padding: 20px 0;
+}
+
+.tech-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.tech-icon[title="GitHub"] {
+  filter: brightness(0);
+}
+
+.tech-icon:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.row.justify-content-center {
+  margin-bottom: 30px;
+}
+
+.home img[src*="Kristy.png"] {
+  max-width: 80%;
+  height: auto;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+body.dark-mode .navbar,
+body.dark-mode #navbar-top {
+  background-color: #1e1e1e !important;
+}
+
+body.dark-mode .navbar-brand,
+body.dark-mode .nav-link,
+body.dark-mode .navbar-nav a {
+  color: #f5f5f5;
+}
+
+body.dark-mode .nav-menu {
+  background-color: #1e1e1e;
+  color: #fca61f;
+}
+
+body.dark-mode .home {
+  background: linear-gradient(33deg, rgba(32, 32, 45, 1) 0%, rgba(35, 39, 45, 1) 100%);
+}
+
+body.dark-mode .heading h3,
+body.dark-mode .expertise h4 {
+  color: #f5f5f5;
+}
+
+body.dark-mode .skill {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .progress-card {
+  background-color: #2d2d2d;
+}
+
+body.dark-mode .progress-card::before {
+  background-color: #2d2d2d;
+}
+
+body.dark-mode .circular-progress::before {
+  background-color: #2d2d2d;
+}
+
+body.dark-mode #myBtnContainer button {
+  color: #f5f5f5;
+}
+
+body.dark-mode .post .card {
+  background-color: #2d2d2d;
+  color: #f5f5f5;
+}
+
+body.dark-mode .contact {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .form-control {
+  background-color: #2d2d2d;
+  color: #f5f5f5;
+  border-color: #444;
+}
+
+body.dark-mode .form-control::placeholder {
+  color: #aaa;
+}
+
+body.dark-mode .tech-icon[title="GitHub"] {
+  filter: brightness(2);
+}
+
+#theme-toggle.dark-active {
+    background: #3f396d;
+  }
+
+
+
+body.dark-mode .Working-card img[src*="IT-support.png"],
+body.dark-mode .Working-card img[src*="Financial.png"],
+body.dark-mode .Working-card img[src*="Hiking.png"] {
+  filter: brightness(1.5) invert(1);
+}
+
+body.dark-mode .navbar-brand {
+  color: #ffffff !important; 
+}
+
+/* Modal styling */
+.modal-content {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.modal-header {
+  background-color: #3f396d;
+  color: white;
+  border-bottom: none;
+}
+
+.modal-header .btn-close {
+  color: white;
+  filter: invert(1);
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+.modal-footer {
+  border-top: none;
+}
+
+.modal-body img {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.modal-body img:hover {
+  transform: scale(1.02);
+}
+
+/* Dark mode styles for modals */
+body.dark-mode .modal-content {
+  background-color: #2d2d2d;
+  color: #f5f5f5;
+}
+
+body.dark-mode .modal-header {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .modal-body .text-muted {
+  color: #aaa !important;
+}
+
+/* Contact links styling */
+.contact-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #fca61f;
+}

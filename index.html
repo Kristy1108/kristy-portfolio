@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/Sushi.png" type="image/x-icon">
+    <title>Portfolio - Kristy</title>
+
+    <!-- bootstrap css cdn link  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <!-- custom css file -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- bootstrap icon cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
+
+    <!-- AOS Library css file cdn link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- jquery cdn link  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- navbar starts -->
+    <nav
+      id="navbar-top"
+      class="navbar navbar-expand-lg navbar-light bg-white sticky-top"
+    >
+      <div class="container-fluid px-5">
+        <a class="navbar-brand fw-bold fs-2" href="#" style="color: #3f396d"
+          >Portfolio</a
+        >
+        <button
+          class="nav-menu d-md-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <i class="bi bi-menu-button-fill"></i>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav gap-4" style="font-size: 1.1rem">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Working">Working Experiences</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Skill">Skill</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Project">Project</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <button class="c-btn ms-4 py-2 px-4 rounded-pill d-none d-md-block" id="theme-toggle">
+          <i class="bi bi-moon-fill me-1"></i>
+        </button>
+      </div>
+    </nav>
+    <!-- navbar ends here -->
+
+    <!-- home section starts  -->
+    <section class="home pt-5 pb-5" id="home">
+      <div class="row justify-content-evenly align-middle">
+        <div class="col-10 col-md-6 text-center text-md-start" data-aos="slide-right">
+          <h2 style="color: #3f396d">
+            Hello! I Am <br /><span class="c-orange">Lee Pei Sheh</span>
+          </h2>
+          <p class="text-muted">
+            I have 8 years of work experience now pursuing Software Engineering studies since 2024. 
+            Self-motivated fast learner with skills in Frontend, Backend and database.
+          </p>
+          <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill" onclick="window.location.href='mailto:kristyxlee961108@gmail.com'">
+            Email Me
+          </button>
+          <a href="" class="link ms-4 d-none">See My Work</a>
+        </div>
+        <div class="col-10 col-md-4 d-none d-md-block">
+          <img src="images/Kristy.png" class="img-fluid" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- home section ends here -->
+
+    <!-- expertise section starts -->
+    <section class="expertise mt-5" id="Working">
+      <div class="heading text-center">
+        <small>My Expertise</small>
+        <h3>
+          Working Experiences
+        </h3>
+      </div>
+      <div class="row justify-content-evenly mt-5">
+        <div class="col-10 col-md-4" data-aos="fade-up">
+          <div class="Working-card">
+            <div class="img">
+              <img
+                src="images/IT-support.png"
+                class="w-25 img-fluid img"
+                alt=""
+              />
+            </div>
+            <div class="content mt-3">
+              <h3>XHealth International</h3>
+              <h5>IT Support (Remote)</h5>
+              <h6 style="font-style: italic; color: red;">Jan 2024 - Present</h6>
+              <p class="text-muted">
+                Provided technical assistance for clinic and dental management software, 
+                troubleshooting PC-related issues and system optimization
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-10" data-aos="fade-up">
+          <div class="Working-card">
+            <div class="img">
+              <img
+                src="images/Financial.png"
+                class="w-25 img-fluid img"
+                alt=""
+              />
+            </div>
+            <div class="content mt-3">
+              <h3>SP Advisor Sdn Bhd</h3>
+              <h5>Financial Advisor</h5>
+              <h6 style="font-style: italic; color: red;">Mar 2020 - Apr 2023</h6>
+              <p class="text-muted">
+                Implement personalized financial plan, developed personalized insurance and financial plans
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-10" data-aos="fade-up">
+          <div class="Working-card">
+            <div class="img">
+              <img
+                src="images/Hiking.png"
+                class="w-25 img-fluid img"
+                alt=""
+              />
+            </div>
+            <div class="content mt-3">
+              <h3>Outbac Broga</h3>
+              <h5>Chief Instructor</h5>
+              <h6 style="font-style: italic; color: red;">Jun 2016 - Mar 2020</h6>
+              <p class="text-muted">
+                Organized team-building activities for diverse age groups, enhancing collaboration and team cohesion
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- expertise section ends here -->
+
+    <!-- skill section starts -->
+    <section class="skill mt-5 py-5" id="Skill">
+      <div class="row justify-content-evenly">
+        <div class="col-10 col-md-5 skill-with-progress" data-aos="slide-right">
+          <div class="row justify-content-evenly">
+            <div class="col-10 col-md-6">
+              <div class="progress-card ms-3 ms-md-0">
+                <div class="circular-progress html-css">
+                  <span class="progress-value html-progress">0%</span>
+                </div>
+                <br />
+                <span class="text">HTML & CSS</span>
+              </div>
+            </div>
+            <div class="col-10 col-md-6 mt-4 mt-md-0">
+              <div class="progress-card ms-3 ms-md-0">
+                <div class="circular-progress javascript">
+                  <span class="progress-value javascript-progress">0%</span>
+                </div>
+                <br />
+                <span class="text">JavaScript</span>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-evenly mt-4">
+            <div class="col-10 col-md-6">
+              <div class="progress-card ms-3 ms-md-0">
+                <div class="circular-progress Java">
+                  <span class="progress-value Java-progress">0%</span>
+                </div>
+                <br />
+                <span class="text">Java</span>
+              </div>
+            </div>
+            <div class="col-10 col-md-6 mt-4 mt-md-0">
+              <div class="progress-card ms-3  ms-md-0">
+                <div class="circular-progress C">
+                  <span class="progress-value C-progress">0%</span>
+                </div>
+                <br>
+                <span class="text">C#</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-10 col-md-5 skill-detail" data-aos="slide-left">
+          <div class="heading mt-5 mt-md-3">
+            <small>My Skills</small><br>
+            
+            <div class="tech-icons mt-4">
+              <div class="row justify-content-center mb-4">
+                <div class="col-auto">
+                  <img src="images/javascript.png" alt="JavaScript" class="tech-icon" title="JavaScript">
+                </div>
+                <div class="col-auto">
+                  <img src="images/python.png" alt="Python" class="tech-icon" title="Python">
+                </div>
+                <div class="col-auto">
+                  <img src="images/php.png" alt="PHP" class="tech-icon" title="PHP">
+                </div>
+                <div class="col-auto">
+                  <img src="images/Csharp.png" alt="C#" class="tech-icon" title="C#">
+                </div>
+                <div class="col-auto">
+                  <img src="images/kotlin.png" alt="Kotlin" class="tech-icon" title="Kotlin">
+                </div>
+              </div>
+              
+              <div class="row justify-content-center mb-4">
+                <div class="col-auto">
+                  <img src="images/reactlogo.png" alt="React" class="tech-icon" title="React">
+                </div>
+                <div class="col-auto">
+                  <img src="images/bootstraplogo.png" alt="Bootstrap" class="tech-icon" title="Bootstrap">
+                </div>
+                <div class="col-auto">
+                  <img src="images/canvalogo.png" alt="Canvas" class="tech-icon" title="Canvas">
+                </div>
+                <div class="col-auto">
+                  <img src="images/githublogo.png" alt="GitHub" class="tech-icon" title="GitHub">
+                </div>
+                <div class="col-auto">
+                  <img src="images/netbean.png" alt="NetBeans" class="tech-icon" title="NetBeans">
+                </div>
+              </div>
+              
+              <div class="row justify-content-center mb-4">
+                <div class="col-auto">
+                  <img src="images/vscode.png" alt="VS Code" class="tech-icon" title="VS Code">
+                </div>
+                <div class="col-auto">
+                  <img src="images/android-studio.png" alt="Android Studio" class="tech-icon" title="Android Studio">
+                </div>
+                <div class="col-auto">
+                  <img src="images/cursor.png" alt="Cursor" class="tech-icon" title="Cursor">
+                </div>
+                <div class="col-auto">
+                  <img src="images/mysql.png" alt="MySQL" class="tech-icon" title="MySQL">
+                </div>
+                <div class="col-auto">
+                  <img src="images/sqlserver.png" alt="SQL Server" class="tech-icon" title="SQL Server">
+                </div>
+              </div>
+            </div>
+
+            <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
+              <a
+                href="images/Kristy Resume 2025.pdf"
+                download="Kristy_Resume"
+                style="text-decoration: none;color: #fff;"
+                >Download Resume</a
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- skill section end here -->
+
+    <!-- Project section starts here -->
+    <section class="Project" id="Project">
+      <div class="heading text-center pt-5">
+        <small>Creative Work</small>
+        <h3>Check My Project</h3>
+      </div>
+
+      <div id="myBtnContainer" class="text-center mt-4">
+        <!-- data for filtering -->
+        <button class="filter-item" data-filter="all">All</button>
+        <button class="filter-item" data-filter="game">Game</button>
+        <button class="filter-item" data-filter="webapp">Web App</button>
+        <button class="filter-item" data-filter="website">Website</button>
+      </div>
+      <div class="Project-body">
+        <div class="row justify-content-evenly px-4">
+          <div class="post col-md-4 webapp all col-10 mt-3 mt-md-0" data-aos="fade-up">
+            <div class="card">
+              <img src="images/SIS.png" class="card-img-top" alt="..." />
+              <div class="card-body text-center">
+                <h4 class="card-title">School Information System</h4>
+                <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+                <span class="badge bg-secondary badge-pill">ReactJS</span>
+                <span class="badge bg-secondary badge-pill mb-2">WebApp</span
+                ><br />
+                <a href="https://sis-reactjs-json.onrender.com/" class="link" target="_blank">View Live</a>
+              </div>
+            </div>
+          </div>
+          <div class="post col-md-4 website all col-10 mt-3 mt-md-0" data-aos="fade-up">
+            <div class="card">
+              <img
+                src="images/pawsworld.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body text-center">
+                <h4 class="card-title">PawsWorld</h4>
+                <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+                <span class="badge bg-secondary badge-pill">Bootstrap</span>
+                <span class="badge bg-secondary badge-pill mb-2">Website</span
+                ><br />
+                <a href="https://pawsworld-html-bootstrap.netlify.app/" class="link" target="_blank">View Live</a>
+              </div>
+            </div>
+          </div>
+          <div class="post col-md-4 game all col-10 mt-3 mt-md-0" data-aos="fade-up">
+            <div class="card">
+              <img src="images/tetrisbattle.png" class="card-img-top" alt="..." />
+              <div class="card-body text-center">
+                <h4 class="card-title">Tetris Battle</h4>
+                <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+                <span class="badge bg-secondary badge-pill">JavaScript</span>
+                <span class="badge bg-secondary badge-pill mb-2">Game</span
+                ><br />
+                <a href="https://tetris-battle-js-jquery.netlify.app/" class="link" target="_blank">View Live</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-evenly mt-4 px-4">
+          <div class="post col-md-4 webapp all col-10 mt-3 mt-md-0" data-aos="fade-up">
+            <div class="card">
+              <img src="images/todolist.png" class="card-img-top" alt="..." />
+              <div class="card-body text-center">
+                <h4 class="card-title">Todo List</h4>
+                <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+                <span class="badge bg-secondary badge-pill">ReactJS</span>
+                <span class="badge bg-secondary badge-pill mb-2">WebApp</span
+                ><br />
+                <a href="https://kristy-todo-list-reactjs.netlify.app/" class="link" target="_blank">View Live</a>
+              </div>
+            </div>
+          </div>
+          <div class="post col-md-4 website all col-10 mt-3 mt-md-0" data-aos="fade-up">
+            <div class="card">
+              <img src="images/Kaizoku.png" class="card-img-top" alt="..." />
+              <div class="card-body text-center">
+                <h4 class="card-title">Kaizoku Sushi</h4>
+                <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+                <span class="badge bg-secondary badge-pill mb-2">First Website</span
+                ><br />
+                <a href="https://kaizoku-sushi-html-css.netlify.app/" class="link" target="_blank">View Live</a>
+              </div>
+            </div>
+          </div>
+          <div class="post col-md-4 webapp game all col-10 mt-3 mt-md-0" data-aos="fade-up">
+            <div class="card">
+              <img src="images/Java-Gomoku.png" class="card-img-top" alt="..." />
+              <div class="card-body text-center">
+                <h4 class="card-title">SIS & Gomoku</h4>
+                <span class="badge bg-secondary badge-pill">Java</span>
+                <span class="badge bg-secondary badge-pill">Kotlin</span>
+                <span class="badge bg-secondary badge-pill mb-2">App</span
+                ><br />
+                <a href="#" class="link me-3" data-bs-toggle="modal" data-bs-target="#sisModal">Read More SIS</a>
+                <a href="#" class="link" data-bs-toggle="modal" data-bs-target="#gomokuModal">Read More Gomoku</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Project section ends here -->
+
+    <!-- contact section starts -->
+    <section class="contact py-5" id="contact">
+      <div class="heading text-center">
+        <small>Get in Touch</small>
+        <h3>Any Questions? Feel Free to Contact</h3>
+      </div>
+      <div class="row justify-content-evenly mt-5">
+        <div class="col-md-5 col-10 contact-details" data-aos="slide-right">
+          <div class="row justify-content-evenly">
+            <div class="col-1">
+              <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <div class="col-11">
+              <p>33, Lorong Sungai Puloh 9B, Taman Klang Utama</p>
+            </div>
+          </div>
+          <div class="row justify-content-evenly">
+            <div class="col-1">
+              <i class="bi bi-telephone-fill"></i>
+            </div>
+            <div class="col-11">
+              <p>+6012 288 3367</p>
+            </div>
+          </div>
+          <div class="row justify-content-evenly">
+            <div class="col-1">
+              <i class="bi bi-send-fill"></i>
+            </div>
+            <div class="col-11">
+              <p>Kristyxlee961108@gmail.com</p>
+            </div>
+          </div>
+          <div class="row justify-content-evenly">
+            <div class="col-1">
+              <i class="bi bi-linkedin"></i>
+            </div>
+            <div class="col-11">
+              <p><a href="https://www.linkedin.com/in/kristyxlee" target="_blank" class="contact-link">www.linkedin.com/in/kristyxlee</a></p>
+            </div>
+          </div>
+          <div class="row justify-content-evenly">
+            <div class="col-1">
+              <i class="bi bi-github"></i>
+            </div>
+            <div class="col-11">
+              <p><a href="https://github.com/Kristy1108" target="_blank" class="contact-link">https://github.com/Kristy1108</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 col-10 mt-3 mt-md-0" data-aos="slide-left">
+          <div class="contact-form">
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Name"
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="E-mail"
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Mobile No."
+              />
+            </div>
+            <div class="mb-3">
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                placeholder="Message"
+                rows="5"
+              ></textarea>
+            </div>
+            <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact section ends here -->
+
+      <!-- redirected to top page  -->
+    <button
+      type="button"
+      class="btn btn-floating btn-lg rounded-pill"
+      id="btn-back-to-top"
+    >
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- footer section starts  -->
+    <footer class="text-center text-muted py-4">
+      <h3 class="text-white pt-4" data-aos="fade-up">Portfolio</h3>
+      <div class="link-group mt-5" data-aos="fade-up">
+        <a href="#home">Home</a>
+        <div class="vr"></div>
+        <a href="#Skill">Skill</a>
+        <div class="vr"></div>
+        <a href="#Working">Working Experiences</a>
+        <div class="vr"></div>
+        <a href="#Project">Project</a>
+        <div class="vr"></div>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="social-links mt-5" data-aos="fade-up">
+        <button href="" class="rounded-pill instagram" onclick="window.open('https://instagram.com/kristy1108_lee', '_blank')">
+          <i class="bi bi-instagram"></i>
+        </button>
+        <button href="" class="rounded-pill whatsapp" onclick="window.open('https://wa.me/60122883367?text=From%20Portfolio', '_blank')">
+          <i class="bi bi-whatsapp"></i>
+        </button>
+        <button href="" class="rounded-pill facebook" onclick="window.open('https://www.facebook.com/joyce.lee.52459', '_blank')">
+          <i class="bi bi-facebook"></i>
+        </button>
+      </div>
+      <hr class="text-muted my-4" />
+
+      <p>Copyright 2025 Portfolio | All Rights Reserved.</p>
+    </footer>
+    <!-- footer section ends here -->
+
+      <!-- bootstrap javascript cdn link  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- SIS Modal -->
+    <div class="modal fade" id="sisModal" tabindex="-1" aria-labelledby="sisModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="sisModalLabel">School Information System (SIS)</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="mb-4">
+              This School Information System is built using Java language with GUI layout and connects to a MySQL database. The system includes login page, register module, teacher and student module and result module
+            </p>
+            
+            <div class="row mb-4">
+              <div class="col-12 col-md-6 mb-4 mb-md-0">
+                <img src="images/Java-Main.png" class="img-fluid rounded mb-2 w-100" alt="Main Page">
+                <p class="small text-muted">Main page for registering student and teacher information</p>
+              </div>
+              <div class="col-12 col-md-6">
+                <img src="images/Java-Student.png" class="img-fluid rounded mb-2 w-100" alt="Student Module">
+                <p class="small text-muted">Teacher and Student module for managing their information</p>
+              </div>
+            </div>
+            
+            <div class="row mb-4">
+              <div class="col-12 col-md-6 mb-4 mb-md-0">
+                <img src="images/Java-Search.png" class="img-fluid rounded mb-2 w-100" alt="Search Function">
+                <p class="small text-muted">Able to search by their ID or Name</p>
+              </div>
+              <div class="col-12 col-md-6">
+                <img src="images/Java-Edit.png" class="img-fluid rounded mb-2 w-100" alt="Edit Function">
+                <p class="small text-muted">Able to edit their information</p>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-md-12">
+                <img src="images/Java-Result.png" class="img-fluid rounded mb-2" alt="Result Module" style="max-height: 400px; margin: 0 auto; display: block;">
+                <p class="small text-muted text-center">Result module automatically creates student records with default values when a new student is registered</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gomoku Modal -->
+    <div class="modal fade" id="gomokuModal" tabindex="-1" aria-labelledby="gomokuModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="gomokuModalLabel">Gomoku Game</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row mb-4">
+              <div class="col-12">
+                <p class="text-center mb-4">Gomoku is a classic strategy board game where players alternate turns placing stones on a 15×15 board. Developed in Android Studio using Kotlin, interactive board with smooth touch controls, real-time move validation, dynamic win detection, and a clean, responsive UI for two-player gameplay</p>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-6">
+                <img src="images/Gomoku-Gameplay.png" class="img-fluid rounded mb-2" alt="Gomoku Gameplay" style="max-height: 400px; margin: 0 auto; display: block;">
+                <p class="small text-muted text-center">Interactive gameplay with a clean user interface</p>
+              </div>
+              <div class="col-6">
+                <img src="images/Gomoku-win.png" class="img-fluid rounded mb-2" alt="Gomoku Win Screen" style="max-height: 400px; margin: 0 auto; display: block;">
+                <p class="small text-muted text-center">Victory screen showing the winning pattern</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AOS library javascript link  -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        offset: 50,
+      });
+    </script>
+    <script src="js/script.js"></script>
+    
+  </body>
+</html>
