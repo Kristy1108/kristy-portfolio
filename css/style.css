@@ -424,6 +424,7 @@ body.dark-mode .tech-icon[title="GitHub"] {
 
 body.dark-mode .Working-card img[src*="IT-support.png"],
 body.dark-mode .Working-card img[src*="Financial.png"],
+body.dark-mode .Working-card img[src*="Programmer.png"],
 body.dark-mode .Working-card img[src*="Hiking.png"] {
   filter: brightness(1.5) invert(1);
 }
