@@ -66,7 +66,7 @@ let CProgress = document.querySelector(".C"),
   CValue = document.querySelector(".C-progress");
 
 let CStartValue = 0,
-  CEndValue = 75,
+  CEndValue = 60,
   rjsspeed = 30;
 
 let progressC = setInterval(() => {
