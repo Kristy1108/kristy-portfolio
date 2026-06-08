@@ -141,6 +141,71 @@ body{
     padding: 15px 15px;
     border-radius: 0.7rem;
 }
+.working-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 2.5rem 1.5rem;
+    align-items: start;
+    padding: 0 1rem;
+}
+.working-item {
+    grid-column: span 2;
+}
+.working-item:nth-child(-n + 2) {
+    grid-column: span 3;
+}
+.working-icon {
+    width: clamp(64px, 7vw, 96px);
+    aspect-ratio: 1;
+    object-fit: contain;
+}
+.Working-card h3 {
+    font-size: 2rem;
+    overflow-wrap: anywhere;
+}
+.Working-card h5 {
+    font-size: 1.35rem;
+}
+.Working-card h6 {
+    font-size: 1.15rem;
+}
+.Working-card p {
+    max-width: 31rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.15rem;
+}
+
+@media (max-width: 991px) {
+    .working-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem 1rem;
+    }
+    .working-item,
+    .working-item:nth-child(-n + 2) {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 575px) {
+    .heading h3 {
+        font-size: 2rem;
+    }
+    .working-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1.25rem;
+    }
+    .Working-card h3 {
+        font-size: 1.65rem;
+    }
+    .Working-card h5 {
+        font-size: 1.1rem;
+    }
+    .Working-card h6,
+    .Working-card p {
+        font-size: 1rem;
+    }
+}
 
 /* skill section starts */
 .skill{
@@ -425,6 +490,7 @@ body.dark-mode .tech-icon[title="GitHub"] {
 body.dark-mode .Working-card img[src*="IT-support.png"],
 body.dark-mode .Working-card img[src*="Financial.png"],
 body.dark-mode .Working-card img[src*="Programmer.png"],
+body.dark-mode .Working-card img[src*="Edu-development.png"],
 body.dark-mode .Working-card img[src*="Hiking.png"] {
   filter: brightness(1.5) invert(1);
 }
