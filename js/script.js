@@ -143,7 +143,6 @@ mybutton.addEventListener("click",function(){
 document.addEventListener("DOMContentLoaded", function() {
   const themeToggle = document.getElementById('theme-toggle');
   const themeIcon = themeToggle.querySelector('i');
-  const themeText = themeToggle.querySelector('span');
   
   const currentTheme = localStorage.getItem('theme') || 'light';
   
@@ -167,8 +166,19 @@ document.addEventListener("DOMContentLoaded", function() {
       themeToggle.classList.remove('dark-active');
       themeIcon.classList.remove('bi-sun-fill');
       themeIcon.classList.add('bi-moon-fill');
-      themeText.textContent = 'Dark Mode';
+      localStorage.setItem('theme', 'light');
 
     }
   });
+});
+
+document.querySelector('.contact-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const fields = new FormData(this);
+  const subject = 'Portfolio enquiry from ' + fields.get('name');
+  const body = [
+    fields.get('message'), '', fields.get('name'), fields.get('email'), fields.get('phone')
+  ].filter(value => value !== null).join('\r\n');
+  const recipient = document.querySelector('.contact-link[href^="mailto:"]').href;
+  window.location.href = recipient + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
 });

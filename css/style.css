@@ -208,6 +208,32 @@ body{
 }
 
 /* skill section starts */
+.experience-points {
+    max-width: 31rem;
+    margin: 1rem auto;
+    padding-left: 1.4rem;
+    text-align: left;
+}
+.experience-points li + li { margin-top: .4rem; }
+.support-skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+    gap: 1rem;
+}
+.support-skills .support-group { padding: 1.25rem; }
+.support-group img { object-fit: contain; }
+.support-group li + li { margin-top: .3rem; }
+.skill .circular-progress { margin-inline: auto; max-width: 100%; }
+.skill .progress-card:has(.circular-progress) { padding: 1rem .4rem; }
+.circular-progress::before { max-width: calc(100% - 10px); }
+.Project-body .post:first-child .card:has(img[src="images/SIS.png"]) {
+    border-top: 4px solid #6f34fe;
+}
+.contact-link { overflow-wrap: anywhere; }
+main, section { scroll-margin-top: 5rem; }
+section { overflow-x: clip; }
+body.dark-mode .home h2 { color: #f5f5f5 !important; }
+body.dark-mode .text-muted { color: #b6bcc3 !important; }
 .skill{
     background-color: rgb(234, 234, 249);
 }
