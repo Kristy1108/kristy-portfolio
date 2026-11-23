@@ -125,107 +125,87 @@ body{
     font-size: 2.5rem;
     font-weight: 700;
 }
-.expertise h4{
-    color: #3f396d;
-    font-weight: 700;
+/* Resume sections */
+.career-section, .skills-section {
+    --ink: #252834;
+    --muted: #505762;
+    --rule: #d4dbdf;
+    --accent: #17675c;
+    color: var(--ink);
+    padding: 4rem 0;
 }
-.expertise a{
-    text-decoration: none;
-    color: #fca61f;
+.resume-wrap { width: min(72rem, calc(100% - 3rem)); margin-inline: auto; }
+.resume-heading { font-size: 2.5rem; font-weight: 700; margin: 0 0 1.75rem; }
+.featured-roles, .earlier-roles, .skill-directory { display: grid; gap: 1.25rem; }
+.featured-roles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.role-feature {
+    background: #eff6f3;
+    padding: 1.75rem;
+    border-radius: 6px;
+    border-top: 3px solid var(--accent);
 }
-.expertise a:hover{
-    color: #6f34fe;
+.role-feature:nth-child(2) { --accent: #5a478c; background: #f3f0f8; }
+.role-feature header, .skills-header, .tool-heading {
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
 }
-.expertise .Working-card{
-    text-align: center;
-    padding: 15px 15px;
-    border-radius: 0.7rem;
+.role-feature header { margin-bottom: 1.25rem; }
+.role-feature header img { object-fit: contain; }
+.role-date, .section-label {
+    font: 600 .78rem/1.5 system-ui, sans-serif;
+    color: var(--muted);
 }
-.working-grid {
-    display: grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-    gap: 2.5rem 1.5rem;
-    align-items: start;
-    padding: 0 1rem;
+.section-label { margin: 2rem 0 1rem; text-transform: uppercase; }
+.role-feature h3 { font-size: 1.55rem; font-weight: 650; margin: 0; }
+.role-title { margin: .25rem 0 .75rem; font-weight: 600; }
+.role-result { display: flex; align-items: baseline; flex-wrap: wrap; gap: .5rem; margin: 1rem 0; color: var(--accent); }
+.role-result strong { font-size: 2.25rem; line-height: 1; }
+.role-feature ul, .earlier-roles article > p:last-child, .skill-entry ul {
+    font: 400 .96rem/1.6 system-ui, sans-serif; color: var(--muted);
 }
-.working-item {
-    grid-column: span 2;
+.role-feature ul { padding-left: 1.15rem; margin: 0; }
+.role-feature li + li { margin-top: .45rem; }
+.role-feature li::marker { color: var(--accent); }
+.earlier-roles { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; }
+.earlier-roles article { border-top: 1px solid var(--rule); padding-top: .875rem; }
+.earlier-roles h4 { font-size: 1.25rem; margin: .5rem 0 0; }
+.earlier-roles p:last-child { margin-bottom: 0; }
+.skills-section { background: #f6f7f8; }
+.skills-header { flex-wrap: wrap; margin-bottom: 1.5rem; }
+.skills-header h2, .tool-heading h3 { margin: 0; }
+.resume-download { color: var(--accent); font-weight: 600; text-underline-offset: 4px; }
+.skill-directory { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 2rem; }
+.skill-entry { border-top: 1px solid var(--rule); padding: 1rem 0; display: flex; gap: 1rem; }
+.skill-entry > i { color: var(--accent); font-size: 1.25rem; }
+.skill-entry h3 { font-size: 1.2rem; margin: 0 0 .3rem; }
+.skill-entry ul { display: flex; flex-wrap: wrap; list-style: none; padding: 0; margin: 0; column-gap: .65rem; }
+.skill-entry li:not(:last-child)::after { content: " /"; color: #85918f; }
+.tool-heading { border-top: 1px solid var(--rule); padding-top: 1.25rem; margin: .75rem 0; }
+.tool-toggle { background: transparent; color: var(--ink); border: 1px solid var(--rule); border-radius: 50%; width: 36px; height: 36px; }
+.tool-window { overflow-x: auto; }
+.tool-track, .tool-list { display: flex; width: max-content; }
+.tool-list { gap: 2.5rem; align-items: center; list-style: none; margin: 0; padding: .75rem 2.5rem .75rem 0; }
+.tool-list li { display: flex; align-items: center; gap: .5rem; white-space: nowrap; }
+.tool-list img { object-fit: contain; background: white; padding: 3px; border-radius: 4px; }
+.tool-list img[src="images/githublogo.png"] { background-color: #24292f; }
+.tool-window.rolling { overflow: hidden; }
+.rolling .tool-track { animation: tool-scroll 56s linear infinite; }
+.rolling:hover .tool-track, .rolling:focus .tool-track { animation-play-state: paused; }
+@keyframes tool-scroll { to { transform: translateX(-50%); } }
+body.dark-mode :is(.career-section, .skills-section) {
+    --ink: #f3f4f5; --muted: #c0c8cc; --rule: #464c50; --accent: #94d8c6;
 }
-.working-item:nth-child(-n + 2) {
-    grid-column: span 3;
+body.dark-mode .skills-section { background: #202325; }
+body.dark-mode .role-feature { background: #21322e; }
+body.dark-mode .role-feature:nth-child(2) { --accent: #d2bdfa; background: #302b39; }
+body.dark-mode .role-feature header img { filter: invert(1); }
+@media (max-width: 720px) {
+    .featured-roles, .earlier-roles, .skill-directory { grid-template-columns: minmax(0, 1fr); }
+    .earlier-roles { gap: 1rem; }
+    .resume-wrap { width: calc(100% - 2.5rem); }
+    .career-section, .skills-section { padding: 2.75rem 0; }
+    .resume-heading { font-size: 2rem; }
+    .role-feature { padding: 1.25rem; }
 }
-.working-icon {
-    width: clamp(64px, 7vw, 96px);
-    aspect-ratio: 1;
-    object-fit: contain;
-}
-.Working-card h3 {
-    font-size: 2rem;
-    overflow-wrap: anywhere;
-}
-.Working-card h5 {
-    font-size: 1.35rem;
-}
-.Working-card h6 {
-    font-size: 1.15rem;
-}
-.Working-card p {
-    max-width: 31rem;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 1.15rem;
-}
-
-@media (max-width: 991px) {
-    .working-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 2rem 1rem;
-    }
-    .working-item,
-    .working-item:nth-child(-n + 2) {
-        grid-column: span 1;
-    }
-}
-
-@media (max-width: 575px) {
-    .heading h3 {
-        font-size: 2rem;
-    }
-    .working-grid {
-        grid-template-columns: 1fr;
-        padding: 0 1.25rem;
-    }
-    .Working-card h3 {
-        font-size: 1.65rem;
-    }
-    .Working-card h5 {
-        font-size: 1.1rem;
-    }
-    .Working-card h6,
-    .Working-card p {
-        font-size: 1rem;
-    }
-}
-
-/* skill section starts */
-.experience-points {
-    max-width: 31rem;
-    margin: 1rem auto;
-    padding-left: 1.4rem;
-    text-align: left;
-}
-.experience-points li + li { margin-top: .4rem; }
-.support-skills {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
-    gap: 1rem;
-}
-.support-skills .support-group { padding: 1.25rem; }
-.support-group img { object-fit: contain; }
-.support-group li + li { margin-top: .3rem; }
-.skill .circular-progress { margin-inline: auto; max-width: 100%; }
-.skill .progress-card:has(.circular-progress) { padding: 1rem .4rem; }
-.circular-progress::before { max-width: calc(100% - 10px); }
 .Project-body .post:first-child .card:has(img[src="images/SIS.png"]) {
     border-top: 4px solid #6f34fe;
 }
@@ -291,6 +271,43 @@ body.dark-mode .text-muted { color: #b6bcc3 !important; }
 }
 
 /* portfolio section starts */
+.role-story {
+  margin: 0;
+  font: .98rem/1.65 system-ui, sans-serif;
+  color: var(--muted);
+}
+.project-preview { position: relative; }
+.project-preview img { display: block; width: 100%; }
+.project-summary {
+  position: absolute;
+  inset: 0;
+  padding: 1rem 3rem 1rem 1rem;
+  overflow-y: auto;
+  align-content: safe center;
+  background: rgba(255,255,255,.97);
+  color: #282e35;
+  font: .96rem/1.5 system-ui, sans-serif;
+  border-radius: inherit;
+}
+.project-summary p { margin: 0; }
+.summary-toggle {
+  position: absolute;
+  top: .35rem;
+  right: .35rem;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #c9cfd0;
+  background: #fff;
+  color: #253136;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.summary-toggle:focus-visible { outline: 3px solid #5542a1; outline-offset: 1px; }
+@media (hover: hover) and (pointer: fine) {
+  .summary-toggle { opacity: 0; }
+  .project-preview:hover .summary-toggle, .summary-toggle:focus-visible { opacity: 1; }
+}
 #myBtnContainer{
     margin-bottom: 45px;
 }

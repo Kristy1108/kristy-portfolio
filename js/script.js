@@ -1,86 +1,51 @@
-// htmlcss progress circular bar 
-let htmlProgress = document.querySelector(".html-css"),
-  htmlValue = document.querySelector(".html-progress");
+const rail = document.querySelector('.tool-window');
+const track = rail.querySelector('.tool-track');
+const originalList = track.querySelector('ul');
+const copy = originalList.cloneNode(true);
+copy.setAttribute('aria-hidden', 'true');
+track.append(copy);
 
-let htmlStartValue = 0,
-  htmlEndValue = 90,
-  htmlspeed = 30;
+const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const toggle = document.querySelector('.tool-toggle');
+let paused = false;
 
-let progresshtml = setInterval(() => {
-  htmlStartValue++;
+function updateRail() {
+  const moving = !paused && !motion.matches;
+  rail.classList.toggle('rolling', moving);
+  copy.style.display = moving ? '' : 'none';
+  toggle.hidden = motion.matches;
+  toggle.title = paused ? 'Play icon animation' : 'Pause icon animation';
+  toggle.setAttribute('aria-label', toggle.title);
+  toggle.firstElementChild.className = paused ? 'bi bi-play-fill' : 'bi bi-pause-fill';
+}
+toggle.addEventListener('click', () => {
+  paused = !paused;
+  updateRail();
+});
+motion.addEventListener('change', updateRail);
+updateRail();
 
-  htmlValue.textContent = `${htmlStartValue}%`;
-  htmlProgress.style.background = `conic-gradient(#fca61f ${
-    htmlStartValue * 3.6
-  }deg, #ededed 0deg)`;
-
-  if (htmlStartValue == htmlEndValue) {
-    clearInterval(progresshtml);
+document.querySelectorAll('.project-preview').forEach(preview => {
+  const button = preview.querySelector('button');
+  const summary = preview.querySelector('.project-summary');
+  function show(open) {
+    summary.hidden = !open;
+    button.setAttribute('aria-expanded', String(open));
+    button.firstElementChild.className = open ? 'bi bi-x-lg' : 'bi bi-info-circle';
+    if (open) summary.scrollTop = 0;
   }
-}, htmlspeed);
-
-// javasript progress circular bar 
-let javascriptProgress = document.querySelector(".javascript"),
-  javascriptValue = document.querySelector(".javascript-progress");
-
-let javascriptStartValue = 0,
-  javascriptEndValue = 75,
-  jsspeed = 30;
-
-let progressjs = setInterval(() => {
-  javascriptStartValue++;
-
-  javascriptValue.textContent = `${javascriptStartValue}%`;
-  javascriptProgress.style.background = `conic-gradient(#7d2ae8 ${
-    javascriptStartValue * 3.6
-  }deg, #ededed 0deg)`;
-
-  if (javascriptStartValue == javascriptEndValue) {
-    clearInterval(progressjs);
-  }
-}, jsspeed);
-
-// Java progress circular bar 
-let JavaProgress = document.querySelector(".Java"),
-  JavaValue = document.querySelector(".Java-progress");
-
-let JavaStartValue = 0,
-  JavaEndValue = 70,
-  Javaspeed = 30;
-
-let progressJava = setInterval(() => {
-  JavaStartValue++;
-
-  JavaValue.textContent = `${JavaStartValue}%`;
-  JavaProgress.style.background = `conic-gradient(#20c997 ${
-    JavaStartValue * 3.6
-  }deg, #ededed 0deg)`;
-
-  if (JavaStartValue == JavaEndValue) {
-    clearInterval(progressJava);
-  }
-}, Javaspeed);
-
-// C progress circular bar 
-let CProgress = document.querySelector(".C"),
-  CValue = document.querySelector(".C-progress");
-
-let CStartValue = 0,
-  CEndValue = 60,
-  rjsspeed = 30;
-
-let progressC = setInterval(() => {
-  CStartValue++;
-
-  CValue.textContent = `${CStartValue}%`;
-  CProgress.style.background = `conic-gradient(#3f396d ${
-    CStartValue * 3.6
-  }deg, #ededed 0deg)`;
-
-  if (CStartValue == CEndValue) {
-    clearInterval(progressC);
-  }
-}, rjsspeed);
+  preview.addEventListener('pointerenter', event => {
+    if (event.pointerType === 'mouse') show(true);
+  });
+  preview.addEventListener('pointerleave', event => {
+    if (event.pointerType === 'mouse') show(false);
+  });
+  preview.addEventListener('click', () => show(summary.hidden));
+  preview.addEventListener('focusout', () => show(false));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') show(false);
+  });
+});
 
 
 // filter using javascript
